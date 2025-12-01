@@ -43,6 +43,8 @@ largest_strong_cc = max(strong_components, key=len)
 G_viz = G.copy().to_undirected() # For communities, we need undirected
 communities = list(nx.algorithms.community.greedy_modularity_communities(G_viz)) # No need to be perfect on visualizations :)
 
+#print(communities)
+
 comm_id = {}
 for index, comm in enumerate(communities):
     for v in comm:
